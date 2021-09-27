@@ -6,3 +6,10 @@
 **/_build
 **/ignore
 *.exe
+*.vcxproj
+*.filters
+*.user
+*.sln
+*.o
+*.pdb
+/Build/*

@@ -3,7 +3,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <fstream>
 
-char* read_ascii_file(const char* path);
+namespace pUtil {
+	char* read_ascii_file(const char* path);
+	std::streamoff get_file_size(std::ifstream* stream);
+}
 
 #endif // MOC_UTIL_H
