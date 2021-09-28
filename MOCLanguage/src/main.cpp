@@ -4,6 +4,7 @@
 #include "../include/util.h"
 #include "../include/parser.h"
 #include "../include/token.h"
+#include "../include/compiler.h"
 // lmoc compile file.lmoc
 
 int main(int argc, char** argv){
@@ -23,13 +24,16 @@ int main(int argc, char** argv){
         }
 
         TokenList tokens;
-        ParserStatus pstat = parser.start(&tokens, source);
-        if (pstat != ParserStatus::SUCCESS)
-            return (int)pstat;
-        for (int i = 0; i < tokens.size(); i++) {
-            Token* tok = tokens.get(i);
-            std::cout << tok->type << "," << tok->data << "," << tok->line << std::endl;
-        }
+        Compiler compiler;
+
+        if (parser.start(&tokens, source) != ParserStatus::SUCCESS)
+            return 1;
+
+        if (compiler.start(tokens) != CompilerStatus::SUCCESS)
+            return 1;
+
+        ByteBuffer bytebuffer = compiler.getByteBuffer();
+        pUtil::write_binary_file("out.stmoc", bytebuffer);
     }
 
     return 0;

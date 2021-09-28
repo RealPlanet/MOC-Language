@@ -13,3 +13,4 @@
 *.o
 *.pdb
 /Build/*
+/MOCLanguage/out.stmoc

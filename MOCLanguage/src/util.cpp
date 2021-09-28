@@ -1,4 +1,5 @@
 #include "../include/util.h"
+#include <iostream>
 
 void pUtil::read_ascii_file(const char* path, std::string& out_source){
     // Open file as read only
@@ -26,4 +27,18 @@ std::streamoff pUtil::get_file_size(std::ifstream* stream)
     stream->clear();
     stream->seekg(0, stream->beg);
     return (fsize);
+}
+
+void pUtil::write_binary_file(std::string path, ByteBuffer& bb)
+{
+    std::ofstream output(path, std::ios::binary);
+    if (!output) {
+        std::cerr << "Could not write to file ( " << path << " )" << std::endl;
+        return;
+    }
+
+    for (auto val : bb.buffer) {
+        std::cout << std::hex << std::uppercase << val << std::endl;
+        output << val;
+    }
 }

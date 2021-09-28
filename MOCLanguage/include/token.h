@@ -4,37 +4,40 @@
 #include <vector>
 
 enum class _TokenType {
-    INST,
-    NUMBER
+    INST = 0,
+    NUMBER = 1
 };
 
 enum class _TokenInst {
-    PUSH,
-    ADD,
-    HLT
+    PUSH = 1,
+    ADD = 2,
+    HLT = 3
 };
 typedef enum _TokenInst TokenInst;
 typedef enum _TokenType TokenType;
 
 struct _Token{
-    int type;
+    TokenType type;
     int data;
     int line;
 
-    _Token(int _type, int _data, int _line) : type{ _type }, data{ _data }, line{_line} {}
+    _Token(TokenType _type, int _data, int _line) : type{ _type }, data{ _data }, line{_line} {}
 };
 
 typedef struct _Token Token;
 
 class TokenList {
     std::vector<Token*> data;
-
-    //TokenList* token_list_create(int size);
-    //void token_list_destroy(TokenList* list);
+public:
+    ~TokenList() {
+        for (auto val : data) {
+            delete val;
+        }
+    }
 public:
     void add(Token* tok);
-    Token* get(int index);
-    inline int size() { return data.size(); }
+    Token* get(const int index) const;
+    inline int size() const { return data.size(); }
 };
 
 #endif // MOC_TOKEN_H

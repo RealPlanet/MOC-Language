@@ -27,13 +27,13 @@ ParserStatus Parser::start(TokenList* list,const std::string& source){
 			//This is a numerical constant
 			if (lex[0] == '#') {
 				int num = get_number(lex);
-				list->add(new Token((int)TokenType::NUMBER, num, line));
+				list->add(new Token(TokenType::NUMBER, num, line));
 			}
 			// Must be an instruction
 			else {
 				int inst = (int)get_inst(lex);
 				if (inst >= 0)
-					list->add(new Token((int)TokenType::INST, inst, line));
+					list->add(new Token(TokenType::INST, inst, line));
 				else
 				{
 					std::cout << "Syntax error: Invalid instruction (" << lex << " ) at line : " << line << std::endl;
