@@ -6,7 +6,7 @@
 #include <fstream>
 
 namespace pUtil {
-	char* read_ascii_file(const char* path);
+	void read_ascii_file(const char* path, std::string& out_source);
 	std::streamoff get_file_size(std::ifstream* stream);
 }
 

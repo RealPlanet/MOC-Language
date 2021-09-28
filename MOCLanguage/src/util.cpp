@@ -1,30 +1,19 @@
 #include "../include/util.h"
 
-char* pUtil::read_ascii_file(const char* path){
+void pUtil::read_ascii_file(const char* path, std::string& out_source){
     // Open file as read only
     std::ifstream file_stream(path, std::ifstream::binary);
     //FILE* file = fopen(path, "r");
 
     if(!file_stream.is_open()){
         printf("Could not open file '%s'\n", path);
-        return nullptr; // TODO :: This will break things if not handled properly
+        out_source = "";
+        return;
     }
-
-    std::streamoff size = get_file_size(&file_stream);
-
-    // Transfer ownership of memory to the caller
-    char* buf = new char[size+1];
-    if(!buf){
-        printf("Could not allocate memory for file!\n");
-        return nullptr; // TODO :: This will break things if not handled properly
-    }
-
-    file_stream.read(buf, size);
-    buf[size] = '\0'; // Need to know when text is done being parsed
-    file_stream.close();
-
     // Return contents
-    return buf;
+    out_source.assign((std::istreambuf_iterator<char>(file_stream)),
+        (std::istreambuf_iterator<char>()));
+    file_stream.close();
 }
 
 std::streamoff pUtil::get_file_size(std::ifstream* stream)

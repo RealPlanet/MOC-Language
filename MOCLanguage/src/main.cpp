@@ -15,12 +15,21 @@ int main(int argc, char** argv){
     Parser parser;
 
     if(strcmp(argv[1], "compile") == 0){
-        char* source = pUtil::read_ascii_file(argv[2]);
-        TokenList tokens;
-        parser.start(&tokens, source);
+        std::string source = "";
+        pUtil::read_ascii_file(argv[2], source);
+        if (source.compare("") == 0) {
+            std::cerr << "Given file was empty or could not be read!" << std::endl;
+            return -1;
+        }
 
-        // delete tokens;
-        delete source;
+        TokenList tokens;
+        ParserStatus pstat = parser.start(&tokens, source);
+        if (pstat != ParserStatus::SUCCESS)
+            return (int)pstat;
+        for (int i = 0; i < tokens.size(); i++) {
+            Token* tok = tokens.get(i);
+            std::cout << tok->type << "," << tok->data << "," << tok->line << std::endl;
+        }
     }
 
     return 0;

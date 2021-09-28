@@ -1,28 +1,40 @@
 #ifndef MOC_TOKEN_H
 #define MOC_TOKEN_H
 
+#include <vector>
+
+enum class _TokenType {
+    INST,
+    NUMBER
+};
+
+enum class _TokenInst {
+    PUSH,
+    ADD,
+    HLT
+};
+typedef enum _TokenInst TokenInst;
+typedef enum _TokenType TokenType;
+
 struct _Token{
     int type;
     int data;
     int line;
+
+    _Token(int _type, int _data, int _line) : type{ _type }, data{ _data }, line{_line} {}
 };
 
 typedef struct _Token Token;
 
-Token* create_token(int data, int type, int line);
-void destroy_token(Token* tok);
-
-typedef struct _TokenList TokenList;
-
 class TokenList {
-    Token** data;
-    int ptr;
-    int size;
+    std::vector<Token*> data;
 
     //TokenList* token_list_create(int size);
     //void token_list_destroy(TokenList* list);
-    void token_list_add();
-    Token* token_list_get(TokenList* list, int index);
+public:
+    void add(Token* tok);
+    Token* get(int index);
+    inline int size() { return data.size(); }
 };
 
 #endif // MOC_TOKEN_H
