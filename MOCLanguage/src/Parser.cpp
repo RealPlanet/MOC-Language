@@ -24,7 +24,6 @@ ParserStatus Parser::start(TokenList* list,const std::string& source){
 			if (lex.compare("") == 0)
 				continue;
 
-			std::cout << lex << "Line number is: " << line << std::endl;
 			//This is a numerical constant
 			if (lex[0] == '#') {
 				int num = get_number(lex);
