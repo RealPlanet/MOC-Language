@@ -2,6 +2,7 @@
 #define MOC_TOKEN_H
 
 #include <vector>
+#include "..\Instruction\Instruction.h"
 
 enum class _TokenType {
     INST = 0,
@@ -18,10 +19,13 @@ typedef enum _TokenType TokenType;
 
 struct _Token{
     TokenType type;
-    int data;
+    const Instruction* inst;
     int line;
+    _Token(TokenType _type, const Instruction* _inst, int _line) : type{ _type }, inst{ _inst }, line{ _line } {}
 
-    _Token(TokenType _type, int _data, int _line) : type{ _type }, data{ _data }, line{_line} {}
+    ~_Token() {
+        //delete inst;
+    }
 };
 
 typedef struct _Token Token;

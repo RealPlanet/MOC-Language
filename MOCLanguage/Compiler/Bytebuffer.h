@@ -4,7 +4,6 @@
 #include<stdlib.h>
 #include<stdint.h>
 #include <vector>
-#include "Bytecode.h"
 
 struct _ByteBuffer {
 	std::vector<uint8_t> buffer;

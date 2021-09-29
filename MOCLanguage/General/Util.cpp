@@ -1,10 +1,10 @@
-#include "../include/util.h"
+#include "util.h"
 #include <iostream>
+#include <iomanip>
 
 void pUtil::read_ascii_file(const char* path, std::string& out_source){
     // Open file as read only
     std::ifstream file_stream(path, std::ifstream::binary);
-    //FILE* file = fopen(path, "r");
 
     if(!file_stream.is_open()){
         printf("Could not open file '%s'\n", path);
@@ -38,7 +38,7 @@ void pUtil::write_binary_file(std::string path, ByteBuffer& bb)
     }
 
     for (auto val : bb.buffer) {
-        std::cout << std::hex << std::uppercase << val << std::endl;
+        std::cout << std::hex << (int)val << " ";
         output << val;
     }
 }

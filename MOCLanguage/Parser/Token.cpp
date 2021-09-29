@@ -1,4 +1,4 @@
-#include "../include/Token.h"
+#include "Token.h"
 
 void TokenList::add(Token* tok)
 {

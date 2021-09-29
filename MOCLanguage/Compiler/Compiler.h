@@ -1,6 +1,6 @@
 #ifndef MOC_COMPILER_H
 #define MOC_COMPILER_H
-#include "Token.h"
+#include "..\Parser\Token.h"
 #include "Bytebuffer.h"
 
 enum class _CompilerStatus {

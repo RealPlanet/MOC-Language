@@ -1,6 +1,6 @@
 #ifndef MOC_UTIL_H
 #define MOC_UTIL_H
-#include "Bytebuffer.h"
+#include "..\Compiler\Bytebuffer.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <fstream>

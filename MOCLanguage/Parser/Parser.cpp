@@ -1,10 +1,11 @@
-#include "../include/parser.h"
-#include "../include/token.h"
-#include <string>
 #include <iostream>
 #include <sstream>
+#include <limits>
 
-ParserStatus Parser::start(TokenList* list,const std::string& source){
+#include "Parser.h"
+#include "../Instruction/NumericConstant.h"
+
+ParserStatus Parser::start(const Instructionset& is, TokenList& list, const std::string& source) {
 	int line = 1;
 	std::istringstream source_stream(source);
 	/*
@@ -27,24 +28,26 @@ ParserStatus Parser::start(TokenList* list,const std::string& source){
 			//This is a numerical constant
 			if (lex[0] == '#') {
 				int num = get_number(lex);
-				list->add(new Token(TokenType::NUMBER, num, line));
+				NumericConstant* nc = new NumericConstant(num);
+				list.add(new Token(TokenType::NUMBER, nc, line));
 			}
 			// Must be an instruction
 			else {
-				int inst = (int)get_inst(lex);
-				if (inst >= 0)
-					list->add(new Token(TokenType::INST, inst, line));
+				const Instruction* instruction = get_inst(is, lex);
+				if (instruction->bytecode != get_inst(is, "nop")->bytecode) {
+					list.add(new Token(TokenType::INST, instruction, line));
+				}
 				else
 				{
 					std::cout << "Syntax error: Invalid instruction (" << lex << " ) at line : " << line << std::endl;
 					return ParserStatus::SYNTAX_ERROR;
 				}
 			}
-		}	
+		}
 
 		//Every time we leave the above loop a line has been completely parsed!
 		line++;
-	}	
+	}
 	return ParserStatus::SUCCESS;
 }
 
@@ -54,14 +57,11 @@ uint32_t Parser::get_number(const std::string& buf) const {
 	return (num <= UINT32_MAX) ? num : 0;
 }
 
-TokenInst Parser::get_inst(const std::string& buf) const {
+/*
+* Dictionary<string, opcode>
+* Add method add_opcode
+*/
+const Instruction* Parser::get_inst(const Instructionset& is, const std::string& opname) const {
 
-	if (buf.compare("push") == 0)
-		return TokenInst::PUSH;
-	if(buf.compare("add") == 0)
-		return TokenInst::ADD;
-	if (buf.compare("hlt") == 0)
-		return TokenInst::HLT;
-
-	return (TokenInst)-1;
+	return is.get_instruction(opname);
 }
