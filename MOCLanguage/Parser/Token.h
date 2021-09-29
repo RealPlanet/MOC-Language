@@ -28,13 +28,14 @@ struct _Token{
 };
 
 typedef struct _Token Token;
+// TODO :: Unused? Remove
 typedef std::shared_ptr<Token> TokenPtr;
 
 class TokenList {
-    std::vector<TokenPtr> data;
+    std::vector<Token> data;
 public:
-    void add(TokenPtr tok);
-    TokenPtr get(const int index) const;
+    void add(Token tok);
+    Token get(const int index) const;
 
     inline int size() const { return data.size(); }
 };

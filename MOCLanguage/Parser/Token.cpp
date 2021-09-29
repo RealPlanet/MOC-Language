@@ -1,11 +1,11 @@
 #include "Token.h"
 
-void TokenList::add(TokenPtr tok)
+void TokenList::add(Token tok)
 {
 	data.push_back(tok);
 }
 
-TokenPtr TokenList::get(const int index) const
+Token TokenList::get(const int index) const
 {
 	return data[index];
 }

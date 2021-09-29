@@ -15,9 +15,14 @@ InstructionPtr Instructionset::get_instruction(const std::string name) const {
 	}
 }
 
+/*
+* Register available instructions, must heap allocate so i can cast them to Instruction if any derived class is used!
+*
+* Syntax: string : Instruction name - shared_pointer<Instruction>(OPCODE)
+*/
 Instructionset::Instructionset() {
-	register_instruction("nop", std::make_shared<Instruction>(0x00));
-	register_instruction("push", std::make_shared<Instruction>(0x01));
-	register_instruction("add", std::make_shared<Instruction>(0x02));
-	register_instruction("hlt", std::make_shared<Instruction>(0xFF));
+	register_instruction("nop",		std::make_shared<Instruction>(0x00));
+	register_instruction("push",	std::make_shared<Instruction>(0x01));
+	register_instruction("add",		std::make_shared<Instruction>(0x02));
+	register_instruction("hlt",		std::make_shared<Instruction>(0xFF));
 }
