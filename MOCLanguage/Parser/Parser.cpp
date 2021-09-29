@@ -28,14 +28,14 @@ ParserStatus Parser::start(const Instructionset& is, TokenList& list, const std:
 			//This is a numerical constant
 			if (lex[0] == '#') {
 				int num = get_number(lex);
-				NumericConstant* nc = new NumericConstant(num);
-				list.add(new Token(TokenType::NUMBER, nc, line));
+				InstructionPtr nc = std::make_shared<NumericConstant>(num);
+				list.add(std::make_shared<Token>(TokenType::NUMBER, nc, line));
 			}
 			// Must be an instruction
 			else {
-				const Instruction* instruction = get_inst(is, lex);
+				InstructionPtr instruction = get_inst(is, lex);
 				if (instruction->bytecode != get_inst(is, "nop")->bytecode) {
-					list.add(new Token(TokenType::INST, instruction, line));
+					list.add(std::make_shared<Token>(TokenType::INST, instruction, line));
 				}
 				else
 				{
@@ -57,11 +57,7 @@ uint32_t Parser::get_number(const std::string& buf) const {
 	return (num <= UINT32_MAX) ? num : 0;
 }
 
-/*
-* Dictionary<string, opcode>
-* Add method add_opcode
-*/
-const Instruction* Parser::get_inst(const Instructionset& is, const std::string& opname) const {
+InstructionPtr Parser::get_inst(const Instructionset& is, const std::string& opname) const {
 
 	return is.get_instruction(opname);
 }

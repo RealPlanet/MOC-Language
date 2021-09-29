@@ -11,11 +11,11 @@
 class Instructionset
 {
 private:
-	std::unordered_map<std::string, const Instruction* > instruction_codes;
+	std::unordered_map<std::string, InstructionPtr > instruction_codes;
 public:
 	Instructionset();
-	void register_instruction(std::string name, const Instruction* instruction);
-	const Instruction* get_instruction(const std::string name) const;
+	void register_instruction(std::string name, InstructionPtr instruction);
+	InstructionPtr get_instruction(const std::string name) const;
 };
 #endif // !MOC_INSTRUCTIONSET_H
 

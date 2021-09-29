@@ -2,6 +2,7 @@
 #define MOC_TOKEN_H
 
 #include <vector>
+#include <memory>
 #include "..\Instruction\Instruction.h"
 
 enum class _TokenType {
@@ -14,33 +15,27 @@ enum class _TokenInst {
     ADD = 2,
     HLT = 3
 };
+
 typedef enum _TokenInst TokenInst;
 typedef enum _TokenType TokenType;
 
 struct _Token{
     TokenType type;
-    const Instruction* inst;
+    // This is only a ptr to the instruction set object, token wont handle deleting this!
+    const InstructionPtr inst;
     int line;
-    _Token(TokenType _type, const Instruction* _inst, int _line) : type{ _type }, inst{ _inst }, line{ _line } {}
-
-    ~_Token() {
-        //delete inst;
-    }
+    _Token(TokenType _type, const InstructionPtr _inst, int _line) : type{ _type }, inst{ _inst }, line{ _line } {}
 };
 
 typedef struct _Token Token;
+typedef std::shared_ptr<Token> TokenPtr;
 
 class TokenList {
-    std::vector<Token*> data;
+    std::vector<TokenPtr> data;
 public:
-    ~TokenList() {
-        for (auto val : data) {
-            delete val;
-        }
-    }
-public:
-    void add(Token* tok);
-    Token* get(const int index) const;
+    void add(TokenPtr tok);
+    TokenPtr get(const int index) const;
+
     inline int size() const { return data.size(); }
 };
 

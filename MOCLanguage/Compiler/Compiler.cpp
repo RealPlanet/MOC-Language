@@ -8,8 +8,10 @@ CompilerStatus Compiler::start(const TokenList& tok)
 
 	int token_size = tokens->size();
 	for (int i = 0; i < token_size; i++) {
-		Token* tok = tokens->get(i);
+		TokenPtr tok = tokens->get(i);
+		//tok->inst->pre_write_bytecode(bytebuffer);
 		tok->inst->write_bytecode(bytebuffer);
+		//tok->inst->post_write_bytecode(bytebuffer);
 	}
 
 	return CompilerStatus::SUCCESS;

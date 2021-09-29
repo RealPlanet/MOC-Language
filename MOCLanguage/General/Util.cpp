@@ -38,7 +38,6 @@ void pUtil::write_binary_file(std::string path, ByteBuffer& bb)
     }
 
     for (auto val : bb.buffer) {
-        std::cout << std::hex << (int)val << " ";
         output << val;
     }
 }
