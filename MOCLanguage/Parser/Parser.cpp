@@ -3,7 +3,7 @@
 #include <limits>
 
 #include "Parser.h"
-#include "../Instruction/NumericConstant.h"
+#include "../Instruction/Instructions/NumericConstant.h"
 
 ParserStatus Parser::start(const Instructionset& is, TokenList& list, const std::string& source) {
 	int line = 1;

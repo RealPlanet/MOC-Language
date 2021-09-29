@@ -7,8 +7,20 @@
 #include "../Parser/token.h"
 #include "../Compiler/compiler.h"
 #include "../Instruction/Instructionset.h"
+#include "../Runtime/Runtime.h"
+
 // lmoc compile file.lmoc
 int compile_cmd_response(int argc, char** argv);
+int run_cmd_response(int argc, char** argv);
+
+/*
+* 
+* ASSUMES BIG ENDIAN;
+* 
+* 
+* 
+* 
+*/
 
 int main(int argc, char** argv){
     int result_code = 1;
@@ -19,6 +31,9 @@ int main(int argc, char** argv){
      
     if(strcmp(argv[1], "compile") == 0){
         result_code = compile_cmd_response(argc, argv);
+    }
+    else if (strcmp(argv[1], "run") == 0) {
+        result_code = run_cmd_response(argc, argv);
     }
     
     std::cout << "Program has reached end of main." << std::endl;
@@ -53,4 +68,19 @@ int compile_cmd_response(int argc, char** argv) {
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds> (stop - start);
     std::cout << "Bytecode compilation completed succesfully in: " << duration.count() << " milliseconds." << std::endl;
     return (int)CompilerStatus::SUCCESS;
+}
+
+int run_cmd_response(int argc, char** argv) {
+    std::cout << "Executing given bytecode file." << std::endl;
+
+    std::vector<uint8_t> code;
+    pUtil::read_binary_file(argv[2], code);
+
+    Runtime rt(code);
+    Instructionset is;
+
+    if (rt.start(is) != RuntimeStatus::SUCCESS)
+        return (int)RuntimeStatus::ERROR;
+
+    return (int)RuntimeStatus::SUCCESS;
 }

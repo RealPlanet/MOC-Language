@@ -22,6 +22,7 @@ typedef enum _TokenType TokenType;
 struct _Token{
     TokenType type;
     // This is only a ptr to the instruction set object, token wont handle deleting this!
+    // Could be a union between InstructionPtr and number wrapper (for int/float/ecc) to avoid having to use an Instruction for numeric constants?
     const InstructionPtr inst;
     int line;
     _Token(TokenType _type, const InstructionPtr _inst, int _line) : type{ _type }, inst{ _inst }, line{ _line } {}

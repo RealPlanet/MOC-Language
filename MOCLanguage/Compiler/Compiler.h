@@ -3,6 +3,8 @@
 #include "..\Parser\Token.h"
 #include "Bytebuffer.h"
 
+
+#define STACK_SIZE 1024
 enum class _CompilerStatus {
 	SUCCESS,
 	ERROR
@@ -16,6 +18,7 @@ private:
 	CompilerStatus status;
 	const TokenList* tokens;
 	ByteBuffer* bytebuffer;
+	
 
 public:
 	CompilerStatus start(const TokenList& tok);

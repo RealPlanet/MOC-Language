@@ -14,3 +14,15 @@
 *.pdb
 /Build/*
 /MOCLanguage/out.stmoc
+*.obj
+*.log
+*.ilk
+*.idb
+*.recipe
+/MOCLanguage/Debug - TestRun/MOCLanguage.tlog/MOCLanguage.lastbuildstate
+/MOCLanguage/Debug - TestRun/MOCLanguage.tlog/link.write.1.tlog
+/MOCLanguage/Debug - TestRun/MOCLanguage.tlog/link.read.1.tlog
+/MOCLanguage/Debug - TestRun/MOCLanguage.tlog/link.command.1.tlog
+/MOCLanguage/Debug - TestRun/MOCLanguage.tlog/CL.write.1.tlog
+/MOCLanguage/Debug - TestRun/MOCLanguage.tlog/CL.read.1.tlog
+/MOCLanguage/Debug - TestRun/MOCLanguage.tlog/CL.command.1.tlog

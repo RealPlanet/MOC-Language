@@ -5,14 +5,13 @@
 #include <string>
 #include <typeinfo>
 
-#include "PushInst.h"
 #include "Instruction.h"
 
 class Instructionset
 {
 private:
 	// Holds all instruction types
-	std::unordered_map<std::string, InstructionPtr > instruction_codes;
+	std::unordered_map< std::string, InstructionPtr > instruction_codes;
 public:
 	/*
 	* Register available instructions, must heap allocate so i can cast them to Instruction if any derived class is used!
@@ -27,6 +26,8 @@ public:
 	* Fetch the instruction from the set or return nop if not defined!
 	*/
 	InstructionPtr get_instruction(const std::string name) const;
+	InstructionPtr get_instruction_from_opcode(int opcode) const;
+
 };
 #endif // !MOC_INSTRUCTIONSET_H
 
