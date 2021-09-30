@@ -49,6 +49,11 @@ void pUtil::write_binary_file(const std::string path, ByteBuffer& bb)
     }
 }
 
+uint8_t pUtil::read8(const std::vector<uint8_t>& buffer, uint32_t index)
+{
+    return buffer[index];
+}
+
 uint16_t pUtil::read16(const std::vector<uint8_t>& buffer, uint32_t index)
 {
     return (buffer[index] << 8) | (buffer[index + 1]);
@@ -72,4 +77,12 @@ std::streamoff pUtil::get_file_size(std::ifstream* stream)
     stream->clear();
     stream->seekg(0, stream->beg);
     return (fsize);
+}
+
+uint32_t pUtil::get_number(const std::string& buf) {
+    std::string str = buf.substr(1, buf.size());
+    long num = std::stoi(str);
+
+    // By choice numbers are 32 bit.
+    return (num <= UINT32_MAX) ? num : 0;
 }

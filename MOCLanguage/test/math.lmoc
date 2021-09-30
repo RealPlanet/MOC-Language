@@ -1,4 +1,4 @@
 push #5
-push #2
-mul
+mov %eax #0
+add %eax #5
 hlt

@@ -12,15 +12,17 @@
 * Constants ALSO use this class to register themselves into the token list but won't have a valid opcode ( == NOP )
 */
 class Runtime;
+class RegisterManager;
 class Instruction : public BCWritable
 {
 public:
 	int bytecode = 0x00;
+
 	Instruction(int bc) : bytecode{ bc } {}
-	virtual void write_vm_stack(Runtime& rt, const std::vector<uint8_t>& code) const {};
+	virtual void execute(Runtime& rt, const RegisterManager& regMan, const std::vector<uint8_t>& code) const {};
 
 	// Inherited via BCWritable
-	virtual void write_bytecode(ByteBuffer* bb) const override;
+	virtual int write_bytecode(ByteBuffer* bb, const TokenList* tokens, const int i) const override;
 };
 
 typedef std::shared_ptr<Instruction> InstructionPtr;

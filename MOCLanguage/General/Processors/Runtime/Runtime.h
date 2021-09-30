@@ -3,7 +3,6 @@
 #define MOC_RUNTIME_H
 #include <vector>
 #include <stack>
-#include "../../Instructions/Instructionset/Instructionset.h"
 
 enum class _RuntimeStatus {
 	SUCCESS,
@@ -11,6 +10,7 @@ enum class _RuntimeStatus {
 };
 typedef enum _RuntimeStatus RuntimeStatus;
 
+class Instructionset;
 class Runtime {
 private:
 	std::vector<uint8_t> code;
@@ -22,7 +22,7 @@ private:
 	uint8_t exit = 123;
 public:
 	Runtime(std::vector<uint8_t> newCode) : code{ newCode } {}
-	RuntimeStatus start(Instructionset& is);
+	int start();
 	// Instruction pointer functions
 	inline void incrementIPBy(int inc) { ip += inc; }
 	inline uint32_t getIP() { return ip; }

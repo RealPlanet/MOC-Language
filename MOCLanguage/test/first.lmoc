@@ -1,6 +1,0 @@
-push #9
-push #60
-push #31
-add
-add
-hlt

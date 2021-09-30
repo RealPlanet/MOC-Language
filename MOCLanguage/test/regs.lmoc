@@ -1,0 +1,4 @@
+mov %eax #30
+add %eax #12
+push %eax
+hlt

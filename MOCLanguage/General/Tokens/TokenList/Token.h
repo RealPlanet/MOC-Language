@@ -4,7 +4,8 @@
 
 enum class _TokenType {
     INST = 0,
-    NUMBER = 1
+    NUMBER = 1,
+    REGISTER = 2
 };
 
 enum class _TokenInst {

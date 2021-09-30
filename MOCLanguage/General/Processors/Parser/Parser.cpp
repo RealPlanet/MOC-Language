@@ -3,12 +3,17 @@
 #include <iostream>
 
 #include "../../Tokens/TokenList/Token.h"
-#include "../../Tokens/NumericConstant.h"
-#include "../../Instructions/Instructionset/Instructionset.h"
+#include "../../Tokens/TokenType/NumericConstant.h"
+#include "../../Tokens/TokenType/Register.h"
+#include "../../Processors/Sets/Instructionset.h"
+#include "../../Processors/Sets/RegisterManager.h"
+#include "../../Util.h"
 
-ParserStatus Parser::start(const Instructionset& is, TokenList& list, const std::string& source) {
+ParserStatus Parser::start(TokenList& list, const std::string& source) {
 	int line = 1;
 	std::istringstream source_stream(source);
+	Instructionset is;
+	RegisterManager regManager;
 
 	/*
 	* For each line parse each word
@@ -29,16 +34,27 @@ ParserStatus Parser::start(const Instructionset& is, TokenList& list, const std:
 
 			//This is a numerical constant
 			if (lex[0] == '#') {
-				int num = get_number(lex);
+				int num = pUtil::get_number(lex);
 				BCWritablePtr nc = std::make_shared<NumericConstant>(num);
 				list.add(Token(TokenType::NUMBER, nc, line));
 			}
+			else if (lex[0] == '%') {
+				std::string reg_name = lex.substr(1, lex.size());
+				RegisterPtr reg = regManager.get_reg(reg_name);
+				if (reg != nullptr) {
+					list.add(Token(TokenType::REGISTER, reg, line));
+				}
+				else {
+					std::cout << "Syntax error: Invalid register name (" << lex << " ) at line : " << line << std::endl;
+					return ParserStatus::SYNTAX_ERROR;
+				}
+			}
 			// Must be an instruction
 			else {
-				InstructionPtr instruction = get_inst(is, lex);
+				InstructionPtr instruction = is.get_instruction(lex);
 
 				// This is "ugly" but if I ever changed the nop opcode at least I won't break the check
-				if (instruction->bytecode != get_inst(is, "nop")->bytecode) {
+				if (instruction->bytecode != is.get_instruction("nop")->bytecode) {
 					list.add(Token(TokenType::INST, instruction, line));
 				}
 				else {
@@ -52,16 +68,4 @@ ParserStatus Parser::start(const Instructionset& is, TokenList& list, const std:
 		line++;
 	}
 	return ParserStatus::SUCCESS;
-}
-
-uint32_t Parser::get_number(const std::string& buf) const {
-	std::string str = buf.substr(1, buf.size());
-	long num = std::stoi(str);
-
-	// By choice numbers are 32 bit.
-	return (num <= UINT32_MAX) ? num : 0;
-}
-
-InstructionPtr Parser::get_inst(const Instructionset& is, const std::string& opname) const {
-	return is.get_instruction(opname);
 }

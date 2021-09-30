@@ -4,7 +4,6 @@
 // Own code
 #include "General/util.h"
 #include "General/Tokens/TokenList/token.h"
-#include "General/Instructions/Instructionset/Instructionset.h"
 
 #include "General/Processors/Parser/Parser.h"
 #include "General/Processors/Compiler/compiler.h"
@@ -37,7 +36,7 @@ int main(int argc, char** argv){
         result_code = run_cmd_response(argc, argv);
     }
     
-    std::cout << "Program has reached end of main." << std::endl;
+    std::cout << "Program has reached end of main with exit code"<< result_code << "." << std::endl;
     return 0;
 }
 
@@ -53,9 +52,8 @@ int compile_cmd_response(int argc, char** argv) {
     Parser parser;
     TokenList tokens;
     Compiler compiler;
-    Instructionset is;
-
-    if (parser.start(is, tokens, source) != ParserStatus::SUCCESS)
+    
+    if (parser.start(tokens, source) != ParserStatus::SUCCESS)
         return (int)ParserStatus::SYNTAX_ERROR;
 
     if (compiler.start(tokens) != CompilerStatus::SUCCESS)
@@ -78,10 +76,5 @@ int run_cmd_response(int argc, char** argv) {
     pUtil::read_binary_file(argv[2], code);
 
     Runtime rt(code);
-    Instructionset is;
-
-    if (rt.start(is) != RuntimeStatus::SUCCESS)
-        return (int)RuntimeStatus::ERROR;
-
-    return (int)RuntimeStatus::SUCCESS;
+    return (int)rt.start();
 }

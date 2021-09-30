@@ -1,20 +1,25 @@
 #include "Runtime.h"
+#include "../../Processors/Sets/Instructionset.h"
+#include "../Sets/RegisterManager.h"
 
-RuntimeStatus Runtime::start(Instructionset& is)
+int Runtime::start()
 {
+	Instructionset is;
+	RegisterManager regMan;
+
 	ip = 0;
 	exit = 123;
 	running = true;
 
 	if (code.size() < 1)
-		return RuntimeStatus::ERROR;
+		return (int)RuntimeStatus::ERROR;
 
 	while (running) {
 		InstructionPtr instruction = is.get_instruction_from_opcode(code[ip++]);
-		instruction->write_vm_stack(*this, code);
+		instruction->execute(*this, regMan, code);
 	}
 
-	return RuntimeStatus::SUCCESS;
+	return exit;
 }
 
 void Runtime::push8(uint8_t data)

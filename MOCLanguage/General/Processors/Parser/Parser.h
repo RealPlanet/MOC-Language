@@ -4,6 +4,7 @@
 #include "../../BaseClasses/Instruction/Instruction.h"
 
 class Instructionset;
+class RegisterManager;
 class TokenList;
 enum class _ParserStatus {
 	SUCCESS,
@@ -14,9 +15,7 @@ typedef enum _ParserStatus ParserStatus;
 
 class Parser{
 public:
-	ParserStatus start(const Instructionset& is, TokenList& list, const std::string& source);
-	uint32_t get_number(const std::string& buf) const;
-	InstructionPtr get_inst(const Instructionset& is, const std::string& opname) const;
+	ParserStatus start( TokenList& list, const std::string& source);
 };
 
 #endif // MOC_PARSER_H
