@@ -34,10 +34,14 @@ InstructionPtr Instructionset::get_instruction_from_opcode(int opcode) const
 #include "../PushInst.h"
 #include "../AddInst.h"
 #include "../HltInst.h"
+#include "../SubInst.h"
+#include "../MulInst.h"
 
 Instructionset::Instructionset() {
 	register_instruction("nop",		std::make_shared<Instruction>(0x00));
 	register_instruction("push",	std::make_shared<PushInst>(0x01));
 	register_instruction("add",		std::make_shared<AddInst>(0x02));
+	register_instruction("sub",		std::make_shared<SubInst>(0x03));
+	register_instruction("mul",		std::make_shared<MulInst>(0x04));
 	register_instruction("hlt",		std::make_shared<HltInst>(0xFF));
 }

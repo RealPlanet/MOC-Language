@@ -1,0 +1,1 @@
+1-Convert Math instruction to have parameters instead of taking numbers from the stack
