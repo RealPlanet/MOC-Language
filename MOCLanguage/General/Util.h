@@ -1,9 +1,9 @@
 #ifndef MOC_UTIL_H
 #define MOC_UTIL_H
-#include "..\Compiler\Bytebuffer.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <fstream>
+//Includes OK
+#include <vector>
+#include <string>
+#include "Processors/Compiler/Bytebuffer.h"
 
 namespace pUtil {
 	void read_ascii_file(const char* path, std::string& out_source);

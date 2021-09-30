@@ -1,7 +1,9 @@
-#pragma once
-#include "..\Instruction.h"
-#include "..\..\Runtime\Runtime.h"
-#include <iostream>
+#ifndef MOC_PUSHINST_H
+#define MOC_PUSHINST_H
+//Includes OK
+#include "../BaseClasses/Instruction/Instruction.h"
+#include "../Processors/Runtime/Runtime.h"
+#include "../Util.h"
 
 class PushInst : public Instruction {
 public:
@@ -11,3 +13,5 @@ public:
 		rt.incrementIPBy(4);
 	}
 };
+
+#endif

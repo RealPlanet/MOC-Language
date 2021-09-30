@@ -1,6 +1,8 @@
-#pragma once
-#include "..\Instruction.h"
-#include "..\..\Runtime\Runtime.h"
+#ifndef MOC_HLTINST_H
+#define MOC_HLTINST_H
+//Includes OK
+#include "../BaseClasses/Instruction/Instruction.h"
+#include "../Processors/Runtime/Runtime.h"
 
 class HltInst : public Instruction {
 public:
@@ -10,3 +12,5 @@ public:
 		rt.setRunningStatus(false);
 	}
 };
+
+#endif

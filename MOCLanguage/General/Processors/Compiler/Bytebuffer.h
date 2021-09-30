@@ -1,8 +1,5 @@
 #ifndef MOC_BYTEBUFFER_H
 #define MOC_BYTEBUFFER_H
-
-#include<stdlib.h>
-#include<stdint.h>
 #include <vector>
 
 struct _ByteBuffer {

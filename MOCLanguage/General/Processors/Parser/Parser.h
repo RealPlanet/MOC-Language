@@ -1,11 +1,10 @@
 #ifndef MOC_PARSER_H
 #define MOC_PARSER_H
-#include "Token.h"
-#include "../Instruction/Instructionset.h"
-
-#include <stdint.h>
 #include <string>
+#include "../../BaseClasses/Instruction/Instruction.h"
 
+class Instructionset;
+class TokenList;
 enum class _ParserStatus {
 	SUCCESS,
 	SYNTAX_ERROR

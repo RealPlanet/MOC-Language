@@ -2,12 +2,13 @@
 #include <chrono>
 
 // Own code
-#include "../General/util.h"
-#include "../Parser/parser.h"
-#include "../Parser/token.h"
-#include "../Compiler/compiler.h"
-#include "../Instruction/Instructionset.h"
-#include "../Runtime/Runtime.h"
+#include "General/util.h"
+#include "General/Tokens/TokenList/token.h"
+#include "General/Instructions/Instructionset/Instructionset.h"
+
+#include "General/Processors/Parser/Parser.h"
+#include "General/Processors/Compiler/compiler.h"
+#include "General/Processors/Runtime/Runtime.h"
 
 // lmoc compile file.lmoc
 int compile_cmd_response(int argc, char** argv);

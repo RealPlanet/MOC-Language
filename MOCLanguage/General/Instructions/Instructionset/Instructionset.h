@@ -1,11 +1,8 @@
 #ifndef MOC_INSTRUCTIONSET_H
 #define MOC_INSTRUCTIONSET_H
-
+//Includes OK
 #include <unordered_map>
-#include <string>
-#include <typeinfo>
-
-#include "Instruction.h"
+#include "..\..\BaseClasses\Instruction\Instruction.h"
 
 class Instructionset
 {

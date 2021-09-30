@@ -1,10 +1,9 @@
 
 #ifndef MOC_RUNTIME_H
 #define MOC_RUNTIME_H
+#include <vector>
 #include <stack>
-#include <stdint.h>
-#include "../Compiler/Bytebuffer.h"
-#include "../Instruction/Instructionset.h"
+#include "../../Instructions/Instructionset/Instructionset.h"
 
 enum class _RuntimeStatus {
 	SUCCESS,

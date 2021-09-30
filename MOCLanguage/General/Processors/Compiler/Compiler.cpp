@@ -1,5 +1,4 @@
 #include "..\Compiler\compiler.h"
-#include <iostream>
 
 CompilerStatus Compiler::start(const TokenList& tok)
 {
@@ -11,7 +10,7 @@ CompilerStatus Compiler::start(const TokenList& tok)
 	// Convert tokens into bytecode
 	for (int i = 0; i < token_size; i++) {
 		Token tok = tokens->get(i);
-		tok.inst->write_bytecode(bytebuffer);
+		tok.writable->write_bytecode(bytebuffer);
 	}
 
 	return CompilerStatus::SUCCESS;

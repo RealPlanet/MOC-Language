@@ -1,6 +1,8 @@
-#include "..\Instruction.h"
-#include "..\..\Runtime\Runtime.h"
-#include <iostream>
+#ifndef MOC_ADDINST_H
+#define MOC_ADDINST_H
+//Includes OK
+#include "../BaseClasses/Instruction/Instruction.h"
+#include "../Processors/Runtime/Runtime.h"
 
 class AddInst : public Instruction {
 public:
@@ -8,7 +10,8 @@ public:
 	virtual void write_vm_stack(Runtime& rt, const std::vector<uint8_t>& code) const override {
 		uint32_t a = rt.pop32();
 		uint32_t b = rt.pop32();
-		std::cout << a + b << std::endl;
 		rt.push32(a+b);
 	}
 };
+
+#endif

@@ -1,10 +1,9 @@
 #ifndef MOC_COMPILER_H
 #define MOC_COMPILER_H
-#include "..\Parser\Token.h"
+//Includes OK
 #include "Bytebuffer.h"
+#include "..\..\Tokens\TokenList\Token.h"
 
-
-#define STACK_SIZE 1024
 enum class _CompilerStatus {
 	SUCCESS,
 	ERROR

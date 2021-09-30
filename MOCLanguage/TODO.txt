@@ -1,5 +1,0 @@
-TODO::
-	Create base class "writable" to define bytecode write
-		--Instruction derives from writable
-		--Number derives from writable
-	Replace InstructionPtr with WritablePtr

@@ -1,9 +1,10 @@
-#include <iostream>
-#include <sstream>
-#include <limits>
-
 #include "Parser.h"
-#include "../Instruction/Instructions/NumericConstant.h"
+#include <sstream>
+#include <iostream>
+
+#include "../../Tokens/TokenList/Token.h"
+#include "../../Tokens/NumericConstant.h"
+#include "../../Instructions/Instructionset/Instructionset.h"
 
 ParserStatus Parser::start(const Instructionset& is, TokenList& list, const std::string& source) {
 	int line = 1;
@@ -29,7 +30,7 @@ ParserStatus Parser::start(const Instructionset& is, TokenList& list, const std:
 			//This is a numerical constant
 			if (lex[0] == '#') {
 				int num = get_number(lex);
-				InstructionPtr nc = std::make_shared<NumericConstant>(num);
+				BCWritablePtr nc = std::make_shared<NumericConstant>(num);
 				list.add(Token(TokenType::NUMBER, nc, line));
 			}
 			// Must be an instruction

@@ -31,9 +31,9 @@ InstructionPtr Instructionset::get_instruction_from_opcode(int opcode) const
 *
 * Syntax: string : Instruction name - shared_pointer<Instruction>(OPCODE)
 */
-#include "Instructions/PushInst.h"
-#include "Instructions/AddInst.h"
-#include "Instructions/HltInst.h"
+#include "../PushInst.h"
+#include "../AddInst.h"
+#include "../HltInst.h"
 
 Instructionset::Instructionset() {
 	register_instruction("nop",		std::make_shared<Instruction>(0x00));
