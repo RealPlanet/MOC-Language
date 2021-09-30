@@ -8,12 +8,14 @@ class Instructionset
 {
 private:
 	// Holds all instruction types
-	std::unordered_map< std::string, InstructionPtr > instruction_codes;
+	std::unordered_map< std::string, InstructionPtr > instruction_codes_name;
+	std::unordered_map< int, InstructionPtr > instruction_codes_opcode;
 public:
 	/*
 	* Register available instructions, must heap allocate so i can cast them to Instruction if any derived class is used!
 	*/
 	Instructionset();
+
 	/*
 	* Register a new instruction in the set
 	*/

@@ -30,6 +30,7 @@ public:
 	// Exit code
 	inline void setExitCode(uint8_t code) { exit = code; }
 	inline void setRunningStatus(bool isRunning) { running = isRunning; }
+	inline int stackSize() { return stack.size(); }
 	//Stack functions
 	void push8(uint8_t data);
 	void push16(uint16_t data);

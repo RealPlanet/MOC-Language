@@ -1,0 +1,2 @@
+add %eax #70
+hlt

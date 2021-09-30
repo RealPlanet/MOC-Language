@@ -2,28 +2,29 @@
 #include <stdexcept>
 
 void Instructionset::register_instruction(const std::string name, InstructionPtr instruction) {
-	instruction_codes[name] = instruction;
+	instruction_codes_name[name] = instruction;
 }
 
 // TODO :: Invert these two so runtime is faster -- How would i inspect the bytecode for the keys?
 InstructionPtr Instructionset::get_instruction(const std::string name) const {
 	try {
-		return instruction_codes.at(name);
+		return instruction_codes_name.at(name);
 	}
 	// Return NoOperation code
 	catch (std::out_of_range) {
-		return instruction_codes.at("nop");
+		return instruction_codes_name.at("nop");
 	}
 }
 
 InstructionPtr Instructionset::get_instruction_from_opcode(int opcode) const
 {
-	for(auto entry : instruction_codes) {
-		if (entry.second.get()->bytecode == opcode)
-			return entry.second;
+	try {
+		return instruction_codes_opcode.at(opcode);
 	}
-
-	return instruction_codes.at("nop");
+	// Return NoOperation code
+	catch (std::out_of_range) {
+		return instruction_codes_name.at("nop");
+	}
 }
 
 /*
@@ -47,4 +48,8 @@ Instructionset::Instructionset() {
 	register_instruction("mov",		std::make_shared<MovInst>(0x05));
 
 	register_instruction("hlt",		std::make_shared<HltInst>(0xFF));
+
+	for (auto val : instruction_codes_name) {
+		instruction_codes_opcode[val.second->bytecode] = val.second;
+	}
 }
