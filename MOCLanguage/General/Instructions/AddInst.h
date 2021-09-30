@@ -28,7 +28,7 @@ public:
 		uint8_t a = pUtil::read8(code, rt.getIP()); //Bytecode of register
 		uint32_t b = pUtil::read32(code, rt.getIP() + 1); //Value to add
 		RegisterPtr reg = regMan.get_reg_from_opcode(a);
-		reg->stored_value = b;
+		reg->stored_value += b;
 		rt.incrementIPBy(5);
 	}
 };
