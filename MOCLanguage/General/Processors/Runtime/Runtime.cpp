@@ -1,11 +1,13 @@
 #include "Runtime.h"
-#include "../../Processors/Sets/Instructionset.h"
-#include "../Sets/RegisterManager.h"
+#include "..\..\Util.h"
 
-int Runtime::start()
+int Runtime::start(std::string& path)
 {
-	Instructionset is;
-	RegisterManager regMan;
+	code.clear();
+	pUtil::read_binary_file(path.c_str(), code);
+	std::string dir_path = pUtil::get_file_path(path);
+
+	//label_table.read_labels_from_file("Output\\label_table.dmoc");
 
 	ip = 0;
 	exit = 123;
@@ -16,7 +18,7 @@ int Runtime::start()
 
 	while (running) {
 		InstructionPtr instruction = is.get_instruction_from_opcode(code[ip++]);
-		instruction->execute(*this, regMan, code);
+		instruction->execute(*this);
 	}
 
 	return exit;

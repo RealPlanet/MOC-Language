@@ -8,7 +8,7 @@ public:
 	int stored_value = -1;
 
 	Register(int reg_code) : bytecode{reg_code} {}
-	virtual int write_bytecode(ByteBuffer* bb, const TokenList* tokens, const int i) const override {
+	virtual int write_bytecode(Compiler& compiler, ByteBuffer* bb) const override {
 		bb->write_byte8(bytecode);
 		return 0;
 	}

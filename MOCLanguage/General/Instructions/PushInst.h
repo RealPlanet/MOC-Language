@@ -8,8 +8,8 @@
 class PushInst : public Instruction {
 public:
 	PushInst(int opcode) : Instruction(opcode) {}
-	virtual void execute(Runtime& rt, const RegisterManager& regMan, const std::vector<uint8_t>& code) const override {
-		rt.push32(pUtil::read32(code, rt.getIP()));
+	virtual void execute(Runtime& rt) const override {
+		rt.push32(pUtil::read32(rt.getSource(), rt.getIP()));
 		rt.incrementIPBy(4);
 	}
 };

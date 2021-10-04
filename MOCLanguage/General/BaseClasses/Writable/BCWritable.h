@@ -8,6 +8,7 @@
 * Base class for any object which needs to write bytecode data
 */
 class TokenList;
+class Compiler;
 class BCWritable {
 public:
 	// Most instructions will only need this, but it could be overwritten if needed (Runtime needs to be able to know the size of the instruction)
@@ -17,7 +18,7 @@ public:
 	// or first is a register and second is a number)
 	// i is the position in the tokenlist of this token
 	// Returns status, if != 0 then something went wrong
-	virtual int write_bytecode(ByteBuffer* bb, const TokenList* tokens, const int i) const { return 0; };
+	virtual int write_bytecode(Compiler& compiler, ByteBuffer* bb) const { return 0; };
 };
 typedef std::shared_ptr<BCWritable> BCWritablePtr;
 #endif

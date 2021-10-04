@@ -9,6 +9,8 @@
 #include "General/Processors/Compiler/compiler.h"
 #include "General/Processors/Runtime/Runtime.h"
 
+#include "General/Processors/Sets/LabelTable.h"
+
 // lmoc compile file.lmoc
 int compile_cmd_response(int argc, char** argv);
 int run_cmd_response(int argc, char** argv);
@@ -59,8 +61,15 @@ int compile_cmd_response(int argc, char** argv) {
     if (compiler.start(tokens) != CompilerStatus::SUCCESS)
         return (int)CompilerStatus::ERROR;
 
-    ByteBuffer bytebuffer = compiler.getByteBuffer();
-    pUtil::write_binary_file("out.stmoc", bytebuffer);
+    ByteBuffer* bytebuffer = compiler.getByteBuffer();
+    Labels::LabelTable* table = compiler.getLabels();
+
+    pUtil::create_folder("Output", ".\\");
+    pUtil::write_binary_file("Output\\out.smoc", *bytebuffer);
+    //table->write_labels_to_file("Output\\label_table.dmoc");
+
+    delete bytebuffer;
+    delete table;
     // Finished compiling
 
     auto stop = std::chrono::high_resolution_clock::now();
@@ -72,9 +81,8 @@ int compile_cmd_response(int argc, char** argv) {
 int run_cmd_response(int argc, char** argv) {
     std::cout << "Executing given bytecode file." << std::endl;
 
-    std::vector<uint8_t> code;
-    pUtil::read_binary_file(argv[2], code);
-
-    Runtime rt(code);
-    return (int)rt.start();
+    //I prefer to work with strings
+    std::string path = pUtil::get_string_from_char(argv[2]);
+    Runtime rt;
+    return (int)rt.start(path);
 }

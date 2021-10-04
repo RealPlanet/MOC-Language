@@ -2,9 +2,11 @@
 #include <sstream>
 #include <iostream>
 
+
 #include "../../Tokens/TokenList/Token.h"
 #include "../../Tokens/TokenType/NumericConstant.h"
 #include "../../Tokens/TokenType/Register.h"
+#include "../../Tokens/TokenType/LabelName.h"
 #include "../../Processors/Sets/Instructionset.h"
 #include "../../Processors/Sets/RegisterManager.h"
 #include "../../Util.h"
@@ -34,7 +36,7 @@ ParserStatus Parser::start(TokenList& list, const std::string& source) {
 
 			//This is a numerical constant
 			if (lex[0] == '#') {
-				int num = pUtil::get_number(lex);
+				int num = pUtil::get_number32(lex);
 				BCWritablePtr nc = std::make_shared<NumericConstant>(num);
 				list.add(Token(TokenType::NUMBER, nc, line));
 			}
@@ -48,6 +50,20 @@ ParserStatus Parser::start(TokenList& list, const std::string& source) {
 					std::cout << "Syntax error: Invalid register name (" << lex << " ) at line : " << line << std::endl;
 					return ParserStatus::SYNTAX_ERROR;
 				}
+			}
+			// Must be a label OR Must be a label reference
+			else if (lex[lex.size() - 1] == ':' || lex[0] == '@') {
+				//For substring removal of :
+				int start = 0;
+				int end = lex.size() - 1;
+
+				bool isDefinition = lex[lex.size() - 1] == ':';
+				if (!isDefinition) {
+					//For substring removal of @
+					start = 1;
+					end = lex.size();
+				}
+				list.add(Token(TokenType::LABEL, std::make_shared<LabelName>(lex.substr(start, end), isDefinition), line));
 			}
 			// Must be an instruction
 			else {

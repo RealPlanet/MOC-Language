@@ -4,10 +4,12 @@
 
 enum class _TokenType {
     INST = 0,
-    NUMBER = 1,
-    REGISTER = 2
+    NUMBER,
+    REGISTER,
+    LABEL
 };
 
+/*
 enum class _TokenInst {
     PUSH = 1,
     ADD = 2,
@@ -15,6 +17,8 @@ enum class _TokenInst {
 };
 
 typedef enum _TokenInst TokenInst;
+*/
+
 typedef enum _TokenType TokenType;
 
 struct _Token{

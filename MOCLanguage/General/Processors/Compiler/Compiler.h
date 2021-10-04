@@ -3,6 +3,7 @@
 //Includes OK
 #include "Bytebuffer.h"
 #include "..\..\Tokens\TokenList\Token.h"
+#include "../Sets/LabelTable.h"
 
 enum class _CompilerStatus {
 	SUCCESS,
@@ -13,15 +14,21 @@ typedef enum _CompilerStatus CompilerStatus;
 
 class Compiler {
 private:
-	// Contains last registered status
-	CompilerStatus status;
-	const TokenList* tokens;
-	ByteBuffer* bytebuffer;
-	
+	const TokenList* tokens = nullptr;
+	ByteBuffer* bytebuffer = nullptr;
+	Labels::LabelTable* label_table = nullptr;
 
+	//Stores all JMP instructions to check at the end of compile. If some have unresolved jump an error is thrown.
+	std::vector<Labels::LabelInfo> missingLabels;
+
+	int token_index = 0;
 public:
 	CompilerStatus start(const TokenList& tok);
-	inline ByteBuffer getByteBuffer() { return *bytebuffer; }
+	inline ByteBuffer* getByteBuffer() { return bytebuffer; }
+	inline int getTokenIndex() const { return token_index; }
+	inline const TokenList* getTokenList() { return tokens; }
+	inline Labels::LabelTable* getLabels() { return label_table; }
+	inline std::vector<Labels::LabelInfo>& getUndefinedLabelReferences() { return missingLabels; }
 };
 
 #endif

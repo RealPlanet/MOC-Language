@@ -1,5 +1,10 @@
-mov %eax #5
-call @square
+jmp @main
 
 square:
-	push #40
+	push #69
+	hlt
+
+main:
+	push #16
+	add %eax #1
+	jmp @square
