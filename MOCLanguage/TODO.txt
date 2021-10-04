@@ -1,2 +1,5 @@
 1- Refactor var names of Parser/Compiler/Runtime
 2- Resolve warnings
+3- Add print instruction to better debug code
+
+NOTE :: Because of the missing print instruction I haven't properly tested the logic yet.

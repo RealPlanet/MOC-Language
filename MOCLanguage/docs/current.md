@@ -10,11 +10,11 @@
 
 * `ADD`		- %<Register> #<Number> Adds number to value stored in register
 
-* `SUB`		- Pops last two numbers off of stack, subtracts, pushes result
+* `SUB`		- %<Register> #<Number> Subtracts number to value stored in register
 
-* `MUL`		- Pops last two numbers off of stack, multiplies, pushes result
+* `MUL`		- %<Register> #<Number> Multiplies number to value stored in register
 
-* `HLT`     - Pops stack and returns result as exit code -- NOT FINAL
+* `HLT`     - Pops stack and returns result as exit code
 
 * `JMP`     - Jumps to given label, syntax: JMP <Name>
 
@@ -25,4 +25,7 @@
 
 ## Labels
 The label table is generated on compile time (after parser has scanned the code), once the compiler has finished the bytecode will be writte to file in the following fashion:
-First 32 bits rapresent the IP value that the interpreter needs to jump to on start. The following values will rapresent the labels
+First 32 bits rapresent the IP value that the interpreter needs to jump to on start. The following values will rapresent the labels.
+
+* `NAME:`   - Defines a label named NAME
+* `@NAME`   - References a label named NAME, mainly used for JMP instructions
