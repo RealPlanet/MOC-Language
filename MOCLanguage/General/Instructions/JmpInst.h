@@ -5,6 +5,11 @@
 #include "../Processors/Runtime/Runtime.h"
 #include "../Processors/Compiler/Compiler.h"
 
+/*
+*  Jumps to given label.
+*  
+*  Syntax: JMP @<name>
+*/
 class JmpInst : public Instruction {
 public:
 	JmpInst(int opcode) : Instruction(opcode) {}

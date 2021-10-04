@@ -19,11 +19,8 @@ private:
 	Instructionset is;
 	RegisterManager regMan;
 	Labels::LabelTable label_table;
-
 	std::vector<uint8_t> code;
 	std::stack<uint8_t> stack;
-	
-
 	bool running = false;
 
 	// Instruction pointer
@@ -48,11 +45,11 @@ public:
 	inline void setExitCode(uint8_t code) { exit = code; }
 	inline void setRunningStatus(bool isRunning) { running = isRunning; }
 	inline std::size_t stackSize() { return stack.size(); }
+
 	//Stack functions
 	void push8(uint8_t data);
 	void push16(uint16_t data);
 	void push32(uint32_t data);
-
 	uint8_t  pop8();
 	uint16_t pop16();
 	uint32_t pop32();

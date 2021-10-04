@@ -7,8 +7,7 @@ int Runtime::start(std::string& path)
 	pUtil::read_binary_file(path.c_str(), code);
 	std::string dir_path = pUtil::get_file_path(path);
 
-	//label_table.read_labels_from_file("Output\\label_table.dmoc");
-
+	// Reset vars to be sure everything's fine
 	ip = 0;
 	exit = 123;
 	running = true;

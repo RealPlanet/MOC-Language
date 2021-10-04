@@ -15,7 +15,7 @@ RegisterPtr RegisterManager::get_reg(std::string reg_name) const
 	try {
 		return registers.at(reg_name);
 	}
-	// Return NoOperation code
+	// Return nullptr, register doesn't exist
 	catch (std::out_of_range) {
 		return nullptr;
 	}

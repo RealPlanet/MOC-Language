@@ -1,37 +1,27 @@
 #ifndef MOC_TOKEN_H
 #define MOC_TOKEN_H
 #include "../../BaseClasses/Writable/BCWritable.h"
+#include <vector>
 
+// Enum to store all types of token
 enum class _TokenType {
     INST = 0,
     NUMBER,
     REGISTER,
     LABEL
 };
-
-/*
-enum class _TokenInst {
-    PUSH = 1,
-    ADD = 2,
-    HLT = 3
-};
-
-typedef enum _TokenInst TokenInst;
-*/
-
 typedef enum _TokenType TokenType;
 
+// Basic structure of every token parsed from the source code
 struct _Token{
     TokenType type;
-    // This is only a ptr to the instruction set object, token wont handle deleting this!
-    // Could be a union between InstructionPtr and number wrapper (for int/float/ecc) to avoid having to use an Instruction for numeric constants?
     const BCWritablePtr writable;
     int line;
     _Token(TokenType _type, const BCWritablePtr _write, int _line) : type{ _type }, writable{ _write }, line{ _line } {}
 };
-
 typedef struct _Token Token;
 
+// Token list stores all tokens generated from parsing the source code and will be used to generate the bytecode on compile
 class TokenList {
     std::vector<Token> data;
 public:

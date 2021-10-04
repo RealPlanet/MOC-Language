@@ -5,6 +5,11 @@
 #include "../Processors/Runtime/Runtime.h"
 #include "../Util.h"
 
+/*
+*	Pushes a numeric constant on top of the stack
+* 
+*	Syntax: PUSH #N
+*/
 class PushInst : public Instruction {
 public:
 	PushInst(int opcode) : Instruction(opcode) {}

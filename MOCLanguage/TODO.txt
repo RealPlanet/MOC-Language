@@ -1,5 +1,2 @@
-1- Convert Math instruction to have parameters instead of taking numbers from the stack
-	-ADD was converted
-2- Finish implementation of MOV (Right now instruction is skipped)
-3- Refactor var names of Parser/Compiler/Runtime
-4- Fix jump redefinition, currently writes to wrong bb index
+1- Refactor var names of Parser/Compiler/Runtime
+2- Resolve warnings

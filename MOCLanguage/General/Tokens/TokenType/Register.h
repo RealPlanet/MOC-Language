@@ -2,6 +2,10 @@
 #define MOC_REGISTER_H
 #include "..\..\BaseClasses\Writable\BCWritable.h"
 #include <memory>
+/*
+* Basic implementation of a register (to be expanded to support floats and other operations)
+* Stores a value, bytecode in this class refers to register number
+*/
 class Register : public BCWritable {
 public:
 	int bytecode = 0x00;

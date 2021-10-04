@@ -1,4 +1,5 @@
-push #5
-mov %eax #0
-add %eax #5
+push #255
+add %eax #1
+sub %eax #5
+mul %eax #5
 hlt

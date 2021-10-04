@@ -3,6 +3,12 @@
 #include <unordered_map>
 #include "..\..\Tokens\TokenType\Register.h"
 
+/*
+* Stores all registers and provides getter from name or opcode
+* 
+* TODO :: Update class to have a second map to avoid a linear search in "get_reg_from_opcode"
+*/
+
 class RegisterManager {
 	std::unordered_map< std::string, RegisterPtr > registers;
 

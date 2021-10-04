@@ -4,6 +4,11 @@
 #include "..\..\Processors\Sets\LabelTable.h"
 #include "..\..\Processors\Compiler\Compiler.h"
 
+/*
+* Stores a label definition or reference, handles writing the label reference OR marking the label as "to be updated" at the end of compile.
+* Syntax:	L: for definition,
+*			@R for reference
+*/
 class LabelName : public BCWritable {
 public:
 	std::string name;

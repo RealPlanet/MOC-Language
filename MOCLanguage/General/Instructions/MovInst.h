@@ -7,7 +7,13 @@
 #include "../Processors/Compiler/Compiler.h"
 #include <iostream>
 
-
+/*
+*  Moves a value inside a register, overwriting it's contents
+* 
+*  Syntax: MOV %RR #N
+* 
+*  Errors: Bad MOV instruction - if syntax isn't respected
+*/
 class MovInst : public Instruction {
 public:
 	MovInst(int opcode) : Instruction(opcode) {}
@@ -28,6 +34,10 @@ public:
 	}
 
 	virtual void execute(Runtime& rt) const override {
+		uint8_t a = pUtil::read8(rt.getSource(), rt.getIP()); //Bytecode of register
+		uint32_t b = pUtil::read32(rt.getSource(), rt.getIP() + 1); //Value to move
+		RegisterPtr reg = rt.getRegisterManager().get_reg_from_opcode(a);
+		reg->stored_value = b;
 		rt.incrementIPBy(5);
 	}
 };

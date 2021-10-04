@@ -11,17 +11,12 @@
 
 #include "General/Processors/Sets/LabelTable.h"
 
-// lmoc compile file.lmoc
 int compile_cmd_response(int argc, char** argv);
 int run_cmd_response(int argc, char** argv);
 
 /*
-* 
-* ASSUMES BIG ENDIAN;
-* 
-* 
-* 
-*  <3 kappa
+*   ASSUMES BIG ENDIAN
+*   <3 kappa
 */
 
 int main(int argc, char** argv){
@@ -42,6 +37,7 @@ int main(int argc, char** argv){
     return 0;
 }
 
+//Compiles given file. reports errors, and outputs to Output folder.
 int compile_cmd_response(int argc, char** argv) {
     auto start = std::chrono::high_resolution_clock::now();
 
@@ -78,6 +74,7 @@ int compile_cmd_response(int argc, char** argv) {
     return (int)CompilerStatus::SUCCESS;
 }
 
+// Executes given bytecode and, if needed, outputs to console
 int run_cmd_response(int argc, char** argv) {
     std::cout << "Executing given bytecode file." << std::endl;
 

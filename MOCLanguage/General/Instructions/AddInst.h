@@ -9,6 +9,12 @@
 #include "../Tokens/TokenType/Register.h"
 #include "../Processors/Sets/RegisterManager.h"
 
+/*
+*	Adds a number to a value stored in a register, saves the result in the same register.
+*	Syntax: ADD %RR #N
+*	
+*	Errors : Bad ADD instruction - if syntax isn't respected
+*/
 class AddInst : public Instruction {
 public:
 	AddInst(int opcode) : Instruction(opcode) {}

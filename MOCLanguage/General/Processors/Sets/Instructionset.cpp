@@ -4,8 +4,6 @@
 void Instructionset::register_instruction(const std::string name, InstructionPtr instruction) {
 	instruction_codes_name[name] = instruction;
 }
-
-// TODO :: Invert these two so runtime is faster -- How would i inspect the bytecode for the keys?
 InstructionPtr Instructionset::get_instruction(const std::string name) const {
 	try {
 		return instruction_codes_name.at(name);
@@ -15,7 +13,6 @@ InstructionPtr Instructionset::get_instruction(const std::string name) const {
 		return instruction_codes_name.at("nop");
 	}
 }
-
 InstructionPtr Instructionset::get_instruction_from_opcode(int opcode) const
 {
 	try {
