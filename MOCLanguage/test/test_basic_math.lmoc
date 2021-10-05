@@ -1,5 +1,8 @@
 push #255
 add %eax #1
+printi %eax
 sub %eax #5
+printi %eax
 mul %eax #5
+printi %eax
 hlt

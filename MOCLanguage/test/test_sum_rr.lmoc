@@ -1,0 +1,3 @@
+add %eax %eax2
+push %eax
+hlt

@@ -2,9 +2,11 @@ jmp @main
 
 square:
 	push #69
+	printi #69
 	hlt
 
 main:
 	push #16
+	printi #16
 	add %eax #1
 	jmp @square

@@ -25,7 +25,7 @@ void _ByteBuffer::write_byte32(uint32_t data, bool replaceAt, int index)
 	uint16_t b = (data & 0x0000FFFF);
 
 	write_byte16(a, replaceAt, index);
-	write_byte16(b, replaceAt, index + 1);
+	write_byte16(b, replaceAt, index + 2);
 }
 
 void _ByteBuffer::print_bytebuffer_console()

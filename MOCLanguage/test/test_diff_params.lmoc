@@ -1,0 +1,6 @@
+main:
+	mov %eax #0
+	add %eax #70
+	push %eax
+	sub %eax #1
+	hlt

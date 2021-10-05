@@ -26,7 +26,7 @@ public:
 		// If label doesn't exit save it for later
 		if(!isDefinition && !compiler.getLabels()->has_label(name)){
 			// Needs to save label name and bb index to overwrite the placeholder bits
-			Labels::LabelInfo info(name, bb->buffer_index() + 1);
+			Labels::LabelInfo info(name, bb->buffer_index()); //FIXME :: +1
 			bb->write_byte32(0x00);
 			compiler.getUndefinedLabelReferences().push_back(info);
 			return 0;
