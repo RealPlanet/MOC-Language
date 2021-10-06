@@ -1,0 +1,4 @@
+cmp #6 #5
+push #5
+pushe #69
+hlt

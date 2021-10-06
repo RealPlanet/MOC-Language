@@ -1,0 +1,2307 @@
+jmp @main
+other:
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	push #255
+	add %eax #1
+	printi %eax
+	sub %eax #5
+	printi %eax
+	mul %eax #5
+	printi %eax
+	jmp @end
+main:
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	push #255
+	push #255
+	push #255
+	push #255
+	push #255
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	mul %eax #5
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	sub %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	add %eax #1000
+	jmp @other
+	
+end:
+	hlt

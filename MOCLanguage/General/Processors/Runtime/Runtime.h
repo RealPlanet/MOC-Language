@@ -6,6 +6,7 @@
 #include "../Sets/LabelTable.h"
 #include "../../Processors/Sets/Instructionset.h"
 #include "../Sets/RegisterManager.h"
+#include "MathRegister/MathRegister.h"
 
 enum class _RuntimeStatus {
 	SUCCESS,
@@ -18,6 +19,8 @@ class Runtime {
 private:
 	Instructionset is;
 	RegisterManager regMan;
+	MathRegister math_reg;
+
 	Labels::LabelTable label_table;
 	std::vector<uint8_t> code;
 	std::stack<uint8_t> stack;
@@ -27,7 +30,7 @@ private:
 	uint32_t ip = 0;
 	uint8_t exit = 123;
 public:
-	Runtime() {}
+	Runtime() { math_reg.init_register(); }
 	int start(std::string& path);
 	// Instruction pointer functions
 	inline void incrementIPBy(int inc) { ip += inc; }
@@ -38,6 +41,7 @@ public:
 	// Sets getters
 	inline Labels::LabelTable& getLabelTable() { return label_table; }
 	inline RegisterManager& getRegisterManager() { return regMan; }
+	inline MathRegister& getMathRegister() { return math_reg; }
 	// Code getter
 	inline std::vector<uint8_t> getSource() { return code; }
 	

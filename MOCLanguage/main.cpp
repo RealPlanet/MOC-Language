@@ -33,7 +33,7 @@ int main(int argc, char** argv){
         result_code = run_cmd_response(argc, argv);
     }
     
-    std::cout << "Program has reached end of main with exit code"<< result_code << "." << std::endl;
+    std::cout << "Program has reached end of main with exit code: "<< result_code << "." << std::endl;
     return 0;
 }
 
