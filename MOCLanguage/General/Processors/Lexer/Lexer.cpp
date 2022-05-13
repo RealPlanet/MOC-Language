@@ -18,15 +18,20 @@ void Lexer::start() {
 	//while (!source_stream.eof() && status == LexerStatus::SUCCESS)
 	for(current_char_index = 0; current_char_index < source.size() && status != LexerStatus::ERROR; current_char_index += current_lex.size())
 	{
-		pUtil::take_word(source, current_char_index, current_lex);
+		bool was_newline = pUtil::take_word(source, current_char_index, current_lex);
 		
 		// Sometimes an empty sting can be caught by >> so we skip it
 		if (!current_lex.compare("") || !current_lex.compare(" ")) {
 			current_char_index++;
+			if (was_newline) {
+				current_line_number++;
+			}
+			
 			continue;
 		}
-			
-			
+
+		std::cout << "Processing lex {" << current_lex << "} at line number {" << current_line_number << "}" << "\n";
+
 		//This is a numerical constant
 		if (current_lex[0] == '#') {
 			parse_literal_token();

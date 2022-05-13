@@ -5,11 +5,18 @@
 #include "Processors/Runtime/Runtime.h"
 
 
-void pUtil::take_word(const std::string& str, int start, std::string& output)
+bool pUtil::take_word(const std::string& str, int start, std::string& output)
 {
     int end = start;
-    for (; end < str.size() && !is_whitespace(str[end]) && !is_crlf(str[end], str[end+1]) && !is_newline(str[end]) ; end++);
+    bool _is_whitespace = false, _is_newline = false;
+    for (;  end < str.size() &&
+            !(_is_whitespace = is_whitespace(str[end])) &&
+            !(_is_newline = is_crlf(str[end], str[end + 1]) || is_newline(str[end]));
+        end++);
+	
 	output = str.substr(start, end - start);
+	
+    return _is_newline;
 }
 
 // INSTRUCTION OPERATIONS

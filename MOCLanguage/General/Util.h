@@ -17,7 +17,7 @@ namespace pUtil {
 	inline bool is_newline(const char c){
 		return c == '\n' || c == '\r' || c == '\t';
 	}
-	void take_word(const std::string& str, int start, std::string& output);
+	bool take_word(const std::string& str, int start, std::string& output);
 		
 	// INSTRUCTION OPERATIONS
 	bool check_condition(Runtime& rt, InstCondition condition_type);
