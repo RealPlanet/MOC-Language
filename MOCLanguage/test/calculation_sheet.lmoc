@@ -1,0 +1,14 @@
+prints #"Begin loop & calculation test"
+prints #"Max loop count is 5"
+mov %eax #5
+
+loop:
+	prints #"this is iteration: "
+	printi %eax
+	sub %eax #1
+	cmp %eax #0
+	jmpne @loop
+	
+end:
+	prints #"Exiting program"
+	hlt

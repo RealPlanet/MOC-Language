@@ -30,7 +30,7 @@ void Lexer::start() {
 			continue;
 		}
 
-		std::cout << "Processing lex {" << current_lex << "} at line number {" << current_line_number << "}" << "\n";
+		//std::cout << "Processing lex {" << current_lex << "} at line number {" << current_line_number << "}" << "\n";
 
 		//This is a numerical constant
 		if (current_lex[0] == '#') {

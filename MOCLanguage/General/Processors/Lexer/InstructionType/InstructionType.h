@@ -4,7 +4,9 @@
 // Parameter order
 enum class InstType {
 	RR = 0x00,	// Register - Register
+	NN,
 	RN,			// Register - Number
+	NR,			// Number - Register
 	R,			// Register
 	N,			// Number
 	S			// String

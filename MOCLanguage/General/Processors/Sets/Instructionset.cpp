@@ -44,25 +44,25 @@ InstructionPtr InstructionSet::get_instruction_from_opcode(int opcode) const
 
 InstructionSet::InstructionSet() {
 	int inst_counter = 0x00;
-	register_instruction("nop",		std::make_shared<Instruction>	(inst_counter++)	);
+	register_instruction("nop",		std::make_shared<Instruction>		(inst_counter++)	);
 
 	//Stack instructions
-	register_instruction("push",	std::make_shared<PushInst>(inst_counter++)	);
-	register_instruction("pushe",	std::make_shared<PushConditional>(inst_counter++, InstCondition::EQUAL)	);
+	register_instruction("push",	std::make_shared<PushInst>			(inst_counter++)	);
+	register_instruction("pushe",	std::make_shared<PushConditional>	(inst_counter++, InstCondition::EQUAL)	);
 
 	//Math instructions
-	register_instruction("add",		std::make_shared<AddInst>		(inst_counter++)	);
-	register_instruction("sub",		std::make_shared<SubInst>		(inst_counter++)	);
-	register_instruction("mul",		std::make_shared<MulInst>		(inst_counter++)	);
-	register_instruction("mov",		std::make_shared<MovInst>		(inst_counter++)	);
+	register_instruction("add",		std::make_shared<AddInst>			(inst_counter++)	);
+	register_instruction("sub",		std::make_shared<SubInst>			(inst_counter++)	);
+	register_instruction("mul",		std::make_shared<MulInst>			(inst_counter++)	);
+	register_instruction("mov",		std::make_shared<MovInst>			(inst_counter++)	);
 
 	//Logic instructions
-	register_instruction("jmp",		std::make_shared<JmpInst>		(inst_counter++)	);
-	register_instruction("jmpne",	std::make_shared<JmpConditional>(inst_counter++, InstCondition::NOT_EQUAL)	);
+	register_instruction("jmp",		std::make_shared<JmpInst>			(inst_counter++)	);
+	register_instruction("jmpne",	std::make_shared<JmpConditional>	(inst_counter++, InstCondition::NOT_EQUAL)	);
 
-	register_instruction("printi",	std::make_shared<PrintIInst>	(inst_counter++)	);
-	register_instruction("prints",	std::make_shared<PrintString>	(inst_counter++)	);
-	register_instruction("cmp",		std::make_shared<CmpInst>		(inst_counter++)	);
+	register_instruction("printi",	std::make_shared<PrintIInst>		(inst_counter++)	);
+	register_instruction("prints",	std::make_shared<PrintString>		(inst_counter++)	);
+	register_instruction("cmp",		std::make_shared<CmpInst>			(inst_counter++)	);
 
 
 	register_instruction("hlt",		std::make_shared<HltInst>		(0xFF)	);

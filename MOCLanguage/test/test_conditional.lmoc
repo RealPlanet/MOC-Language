@@ -1,4 +1,4 @@
-cmp #5 #6
+cmp #6 #6
 push #5
 pushe #69
 hlt

@@ -9,7 +9,7 @@ public:
 	virtual int write_bytecode(Compiler& compiler, ByteBuffer* bb) const override {
 		bb->write_byte8(bytecode);
 		bb->write_byte8((int)condition_type);
-		return JmpInst::write_bytecode(compiler, bb);
+		return 0;
 	}
 
 	virtual void execute(Runtime& rt) const override {

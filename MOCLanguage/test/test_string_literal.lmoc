@@ -1,5 +1,12 @@
 jmp @main
 
 main:
-	prints #"Hello world, this is my first literal test!!!!!"
+	prints #"Starting sum program"
+	prints #"Adding together 2 and 10"
+	mov %eax #2
+	printi %eax
+	add %eax #10
+	printi %eax
+	prints #"End of program"
+
 	hlt
