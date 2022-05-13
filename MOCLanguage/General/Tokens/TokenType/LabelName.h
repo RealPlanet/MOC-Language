@@ -1,5 +1,5 @@
 #ifndef MOC_LABEL_H
-#define MOC_NUMERICCONST_H
+#define MOC_LABEL_H
 #include "..\..\BaseClasses\Writable\BCWritable.h"
 #include "..\..\Processors\Sets\LabelTable.h"
 #include "..\..\Processors\Compiler\Compiler.h"

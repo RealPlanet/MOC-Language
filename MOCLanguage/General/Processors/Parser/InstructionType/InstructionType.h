@@ -6,7 +6,8 @@ enum class InstType {
 	RR = 0x00,	// Register - Register
 	RN,			// Register - Number
 	R,			// Register
-	N			// Number
+	N,			// Number
+	S			// String
 };
 
 #endif // !MOC_INSTRUCTIONTYPE_H

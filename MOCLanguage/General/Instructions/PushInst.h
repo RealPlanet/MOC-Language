@@ -10,18 +10,16 @@
 #include "../Tokens/TokenList/Token.h"
 #include "../Tokens/TokenType/Register.h"
 #include "../Processors/Sets/RegisterManager.h"
+
 /*
 *	Pushes a numeric constant on top of the stack
 * 
 *	Syntax: PUSH #N
 */
 class PushInst : public Instruction {
-public:
-	PushInst(int opcode, InstCondition cond = InstCondition::NONE) : Instruction(opcode, cond) {}
-	virtual int write_bytecode(Compiler& compiler, ByteBuffer* bb) const override {
-		bb->write_byte8(bytecode);
-		bb->write_byte8((int)condition_type);
-
+protected:
+	//Moved operation into a static function in order to reduce code duplication in conditional instructions
+	static int write_push_data(Compiler& compiler, ByteBuffer* bb) {
 		const TokenList* tokens = compiler.getTokenList();
 		int i = compiler.getTokenIndex();
 
@@ -38,30 +36,27 @@ public:
 
 		return 0;
 	}
+public:
+	PushInst(int opcode) : Instruction(opcode) {}
+	virtual int write_bytecode(Compiler& compiler, ByteBuffer* bb) const override {
+		Instruction::write_bytecode(compiler, bb); //Write base opcode
+		return write_push_data(compiler, bb);
+	}
 
 	virtual void execute(Runtime& rt) const override {
-		InstCondition condition = (InstCondition)pUtil::read8(rt.getSource(), rt.getIP());
-		InstType type = (InstType)pUtil::read8(rt.getSource(), rt.getIP() + 1);
-		int ip_inc = 2; // Base amount, instruction type + condition type;
-
-		bool doOperation = check_condition(rt, condition);
+		InstType type = (InstType)pUtil::read8(rt.getSource(), rt.getIP());
+		int ip_inc = 1; // Base amount, instruction type + condition type;
 
 		switch (type) {
 			case InstType::R: {
-				if (doOperation) {
-					uint8_t regCode = pUtil::read8(rt.getSource(), rt.getIP() + 2);
-					RegisterPtr reg = rt.getRegisterManager().get_reg_from_opcode(regCode);
-					rt.push32(reg->stored_value);
-				}
-				
+				uint8_t regCode = pUtil::read8(rt.getSource(), rt.getIP() + 1);
+				RegisterPtr reg = rt.getRegisterManager().get_reg_from_opcode(regCode);
+				rt.push32(reg->stored_value);
 				ip_inc += 1; // Register code is 8 bit long
 				break;
 			}
 			case InstType::N: {
-				if (doOperation) {
-					rt.push32(pUtil::read32(rt.getSource(), rt.getIP() + 2));
-				}
-				
+				rt.push32(pUtil::read32(rt.getSource(), rt.getIP() + 1));
 				ip_inc += 4; // Data is 32 bit long
 				break;
 			}
@@ -73,5 +68,4 @@ public:
 		rt.incrementIPBy(ip_inc);
 	}
 };
-
 #endif

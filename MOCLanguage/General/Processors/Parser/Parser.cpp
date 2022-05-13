@@ -10,6 +10,7 @@
 #include "../../Processors/Sets/Instructionset.h"
 #include "../../Processors/Sets/RegisterManager.h"
 #include "../../Util.h"
+#include "../../Tokens/TokenType/StringConstant.h"
 
 ParserStatus Parser::start(TokenList& list, const std::string& source) {
 	int line = 1;
@@ -23,6 +24,8 @@ ParserStatus Parser::start(TokenList& list, const std::string& source) {
 	while (!source_stream.eof())
 	{
 		std::string next_line;
+		int line_index = 0; //Added for string support
+
 		std::getline(source_stream, next_line);
 		std::istringstream line_stream(next_line);
 
@@ -39,6 +42,24 @@ ParserStatus Parser::start(TokenList& list, const std::string& source) {
 				int num = pUtil::get_number32(lex);
 				BCWritablePtr nc = std::make_shared<NumericConstant>(num);
 				list.add(Token(TokenType::NUMBER, nc, line));
+			}
+			// This is a string constant
+			else if(lex[0] == '\"') { // TODO :: THIS IS BAD, POSSIBLY REWORK, CURRENTLY DOESNT WORK!
+				// Look for corresponding " on this line
+				int literal_size = 0;
+				int string_offset = 3; //Magic Number :: Stream skips whitespace and " before string
+				for (int i = 0; i < next_line.size(); i++) {
+					literal_size++;
+					int index = line_index + string_offset + i;
+					char c = next_line[index];
+					if ( c == '\"')
+						break;
+				}
+
+				std::string literal_string = next_line.substr(line_index + string_offset, line_index + literal_size);
+				pUtil::trim(literal_string);
+				BCWritablePtr sc = std::make_shared<StringConstant>(literal_string);
+				//list.add(Token(TokenType::STRING, sc, line));
 			}
 			else if (lex[0] == '%') {
 				std::string reg_name = lex.substr(1, lex.size());
@@ -78,6 +99,8 @@ ParserStatus Parser::start(TokenList& list, const std::string& source) {
 					return ParserStatus::SYNTAX_ERROR;
 				}
 			}
+
+			line_index += lex.size();
 		}
 
 		//Every time we leave the above loop a line has been completely parsed!

@@ -1,0 +1,12 @@
+jmp @main
+
+square:
+	mul %eax #5
+	printi %eax
+	push #69
+	hlt
+
+main:
+	mov %eax #5
+	jmp @square
+

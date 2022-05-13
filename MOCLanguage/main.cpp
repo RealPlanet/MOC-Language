@@ -3,7 +3,7 @@
 
 // Own code
 #include "General/util.h"
-#include "General/Tokens/TokenList/token.h"
+#include "General/Tokens/TokenList/Token.h"
 
 #include "General/Processors/Parser/Parser.h"
 #include "General/Processors/Compiler/compiler.h"

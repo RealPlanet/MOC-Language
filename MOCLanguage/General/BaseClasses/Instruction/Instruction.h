@@ -6,7 +6,6 @@
 #include "..\..\Processors\Compiler\BB\Bytebuffer.h"
 #include "..\..\Processors\Runtime\MathRegister\MathRegister.h"
 
-
 enum class InstCondition {
 	NONE,
 	EQUAL,
@@ -28,15 +27,12 @@ class Instruction : public BCWritable
 {
 public:
 	int bytecode = 0x00;
-	InstCondition condition_type;
 
-	Instruction(int bc, InstCondition ct = InstCondition::NONE) : bytecode{ bc }, condition_type{ ct } {}
+	Instruction(int bc) : bytecode{ bc } {}
 	virtual void execute(Runtime& rt) const {};
 
 	// Inherited via BCWritable
 	virtual int write_bytecode(Compiler& compiler, ByteBuffer* bb) const override;
-
-	bool check_condition(Runtime& rt, InstCondition condition_type) const;
 };
 
 // Simplification for shared_ptr defitinion

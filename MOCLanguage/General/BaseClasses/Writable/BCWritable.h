@@ -16,7 +16,8 @@ public:
 	// 
 	// A const tokenlist is passed by ptr for writables to gather requried data (for example mov needs to check if the following tokens are a register and a number)
 	// Returns status, if != 0 then something went wrong
-	virtual int write_bytecode(Compiler& compiler, ByteBuffer* bb) const { return 0; };
+
+	virtual int write_bytecode(Compiler& compiler, ByteBuffer* bb) const { return 0; }
 };
 typedef std::shared_ptr<BCWritable> BCWritablePtr;
 #endif

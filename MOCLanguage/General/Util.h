@@ -5,8 +5,11 @@
 #include <string>
 #include "Processors/Compiler/BB/Bytebuffer.h"
 
+enum class InstCondition;
+class Runtime;
 namespace pUtil {
-
+	// INSTRUCTION OPERATIONS
+	bool check_condition(Runtime& rt, InstCondition condition_type);
 	// FILE OPERATIONS
 	// Read file in text mode, save entire contents in a single string (out_source)
 	void read_ascii_file(const char* path, std::string& out_source);

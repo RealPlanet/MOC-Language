@@ -13,6 +13,7 @@ private:
 public:
 	//Register available instructions, must heap allocate so i can cast them to Instruction if any derived class is used!
 	Instructionset();
+	inline int size() { return instruction_codes_name.size(); }
 
 	//Register a new instruction in the set
 	void register_instruction(std::string name, InstructionPtr instruction);

@@ -1,7 +1,36 @@
 #include "util.h"
 #include <iostream>
 #include <fstream>
-#include <filesystem> 
+#include <filesystem>
+#include "Processors/Runtime/Runtime.h"
+// INSTRUCTION OPERATIONS
+bool pUtil::check_condition(Runtime& rt, InstCondition condition_type)
+{
+    switch (condition_type) {
+    case InstCondition::EQUAL: {
+        return	rt.getMathRegister().value(Flags::ZERO) == 1;
+    }
+    case InstCondition::GREATER_THAN: {
+        return	rt.getMathRegister().value(Flags::NEGATIVE) == 0;
+    }
+    case InstCondition::GREATER_THAN_EQUAL: {
+        return	rt.getMathRegister().value(Flags::CARRY) == 0 ||
+            rt.getMathRegister().value(Flags::ZERO) == 1;
+    }
+    case InstCondition::LESS_THAN: {
+        return	rt.getMathRegister().value(Flags::NEGATIVE) == 1;
+    }
+    case InstCondition::LESS_THAN_EQUAL: {
+        return	rt.getMathRegister().value(Flags::CARRY) == 1 ||
+            rt.getMathRegister().value(Flags::ZERO) == 1;
+    }
+    case InstCondition::NOT_EQUAL: {
+        return	rt.getMathRegister().value(Flags::ZERO) == 0;
+    }
+    default: return true;
+    }
+}
+
 // FILE OPERATIONS
 void pUtil::read_ascii_file(const char* path, std::string& out_source){
     // Open file as read only
