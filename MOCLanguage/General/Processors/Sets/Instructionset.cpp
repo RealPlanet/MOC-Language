@@ -40,6 +40,7 @@ InstructionPtr InstructionSet::get_instruction_from_opcode(int opcode) const
 #include "../../Instructions/PrintIInst.h"
 #include "../../Instructions/PrintStringInst.h"
 #include "../../Instructions/CmpInst.h"
+#include "../../Instructions/ConditionalInstructions/JmpConditional.h"
 
 InstructionSet::InstructionSet() {
 	int inst_counter = 0x00;
@@ -57,6 +58,8 @@ InstructionSet::InstructionSet() {
 
 	//Logic instructions
 	register_instruction("jmp",		std::make_shared<JmpInst>		(inst_counter++)	);
+	register_instruction("jmpne",	std::make_shared<JmpConditional>(inst_counter++, InstCondition::NOT_EQUAL)	);
+
 	register_instruction("printi",	std::make_shared<PrintIInst>	(inst_counter++)	);
 	register_instruction("prints",	std::make_shared<PrintString>	(inst_counter++)	);
 	register_instruction("cmp",		std::make_shared<CmpInst>		(inst_counter++)	);
