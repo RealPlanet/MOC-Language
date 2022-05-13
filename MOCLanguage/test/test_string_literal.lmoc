@@ -1,5 +1,5 @@
 jmp @main
 
 main:
-	prints "Hello world"
+	prints #"Hello world, this is my first literal test!!!!!"
 	hlt

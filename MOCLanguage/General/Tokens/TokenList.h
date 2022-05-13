@@ -1,6 +1,6 @@
 #ifndef MOC_TOKEN_H
 #define MOC_TOKEN_H
-#include "../../BaseClasses/Writable/BCWritable.h"
+#include "../BaseClasses/Writable/BCWritable.h"
 #include <vector>
 
 // Enum to store all types of token
@@ -8,8 +8,10 @@ enum class _TokenType {
     INST = 0,
     NUMBER,
     REGISTER,
-    LABEL
+    LABEL,
+	STRING
 };
+
 typedef enum _TokenType TokenType;
 
 // Basic structure of every token parsed from the source code

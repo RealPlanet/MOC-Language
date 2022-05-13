@@ -8,6 +8,17 @@
 enum class InstCondition;
 class Runtime;
 namespace pUtil {
+	inline bool is_crlf(const char c1, const char c2) {
+		return c1 == '\r' && c2 == '\n';
+	}
+	inline bool is_whitespace(const char c){
+		return c == ' ';
+	}
+	inline bool is_newline(const char c){
+		return c == '\n' || c == '\r' || c == '\t';
+	}
+	void take_word(const std::string& str, int start, std::string& output);
+		
 	// INSTRUCTION OPERATIONS
 	bool check_condition(Runtime& rt, InstCondition condition_type);
 	// FILE OPERATIONS

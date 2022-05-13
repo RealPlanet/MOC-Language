@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include "..\..\BaseClasses\Instruction\Instruction.h"
 
-class Instructionset
+class InstructionSet
 {
 private:
 	// Holds all instruction types
@@ -12,7 +12,7 @@ private:
 	std::unordered_map< int, InstructionPtr > instruction_codes_opcode;
 public:
 	//Register available instructions, must heap allocate so i can cast them to Instruction if any derived class is used!
-	Instructionset();
+	InstructionSet();
 	inline int size() { return instruction_codes_name.size(); }
 
 	//Register a new instruction in the set

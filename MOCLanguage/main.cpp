@@ -3,9 +3,9 @@
 
 // Own code
 #include "General/util.h"
-#include "General/Tokens/TokenList/Token.h"
+#include "General/Tokens/TokenList.h"
 
-#include "General/Processors/Parser/Parser.h"
+#include "General/Processors/Lexer/Lexer.h"
 #include "General/Processors/Compiler/compiler.h"
 #include "General/Processors/Runtime/Runtime.h"
 
@@ -47,13 +47,17 @@ int compile_cmd_response(int argc, char** argv) {
         std::cerr << "Given file was empty or could not be read!" << std::endl;
         return -1;
     }
-    Parser parser;
-    TokenList tokens;
-    Compiler compiler;
+    //Parser parser;
     
-    if (parser.start(tokens, source) != ParserStatus::SUCCESS)
-        return (int)ParserStatus::SYNTAX_ERROR;
+	
+    TokenList tokens;
+    Lexer current_lexer(tokens, source);
+    current_lexer.start();
+	
+    if (current_lexer.get_status() != LexerStatus::SUCCESS)
+        return -(int)LexerStatus::ERROR;
 
+    Compiler compiler;
     if (compiler.start(tokens) != CompilerStatus::SUCCESS)
         return (int)CompilerStatus::ERROR;
 

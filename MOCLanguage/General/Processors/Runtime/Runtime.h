@@ -14,10 +14,10 @@ enum class _RuntimeStatus {
 };
 typedef enum _RuntimeStatus RuntimeStatus;
 
-class Instructionset;
+class InstructionSet;
 class Runtime {
 private:
-	Instructionset is;
+	InstructionSet is;
 	RegisterManager regMan;
 	MathRegister math_reg;
 

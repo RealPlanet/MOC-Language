@@ -1,7 +1,7 @@
 #ifndef MOC_REGISTERMANAGER_H
 #define MOC_REGISTERMANAGER_H
 #include <unordered_map>
-#include "..\..\Tokens\TokenType\Register.h"
+#include "..\..\Tokens\TokenDefinition\Register.h"
 
 /*
 * Stores all registers and provides getter from name or opcode

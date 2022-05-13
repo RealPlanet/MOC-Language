@@ -3,6 +3,15 @@
 #include <fstream>
 #include <filesystem>
 #include "Processors/Runtime/Runtime.h"
+
+
+void pUtil::take_word(const std::string& str, int start, std::string& output)
+{
+    int end = start;
+    for (; end < str.size() && !is_whitespace(str[end]) && !is_crlf(str[end], str[end+1]) && !is_newline(str[end]) ; end++);
+	output = str.substr(start, end - start);
+}
+
 // INSTRUCTION OPERATIONS
 bool pUtil::check_condition(Runtime& rt, InstCondition condition_type)
 {
@@ -46,6 +55,7 @@ void pUtil::read_ascii_file(const char* path, std::string& out_source){
         (std::istreambuf_iterator<char>()));
     file_stream.close();
 }
+
 void pUtil::read_binary_file(const char* path, std::vector<uint8_t>& out_code)
 {
     // Open file as read only
@@ -64,6 +74,7 @@ void pUtil::read_binary_file(const char* path, std::vector<uint8_t>& out_code)
 
     file_stream.close();
 }
+
 void pUtil::write_binary_file(const std::string path, ByteBuffer& bb)
 {
     std::ofstream output(path, std::ios::binary);
@@ -76,6 +87,7 @@ void pUtil::write_binary_file(const std::string path, ByteBuffer& bb)
         output << val;
     }
 }
+
 std::streamoff pUtil::get_file_size(std::ifstream* stream)
 {
     std::streampos fsize = stream->tellg();
@@ -87,15 +99,18 @@ std::streamoff pUtil::get_file_size(std::ifstream* stream)
     stream->seekg(0, stream->beg);
     return (fsize);
 }
+
 std::string pUtil::get_file_path(const std::string& path) {
     auto pathEnd = path.find_last_of("/\\");
     auto pathName = pathEnd == std::string::npos ? path : path.substr(0, pathEnd);
     return pathName;
 }
+
 std::string pUtil::get_file_path(const char* path)
 {
     return get_file_path(get_string_from_char(path));
 }
+
 bool pUtil::create_folder(std::string name, std::string path)
 {
     return std::filesystem::create_directory(path + "\\" + name);
@@ -109,17 +124,21 @@ uint32_t pUtil::get_number32(const std::string& buf) {
     // By choice numbers are 32 bit.
     return (num <= UINT32_MAX) ? num : 0;
 }
+
 int pUtil::get_number(const std::string& buf) {
     return std::stoi(buf);
 }
+
 uint8_t pUtil::read8(const std::vector<uint8_t>& buffer, uint32_t index)
 {
     return buffer[index];
 }
+
 uint16_t pUtil::read16(const std::vector<uint8_t>& buffer, uint32_t index)
 {
     return (buffer[index] << 8) | (buffer[index + 1]);
 }
+
 uint32_t pUtil::read32(const std::vector<uint8_t>& buffer, uint32_t index)
 {
     return  (buffer[index] << 24) |
@@ -134,15 +153,18 @@ void pUtil::ltrim(std::string& s) {
         return !std::isspace(ch);
     }));
 }
+
 void pUtil::rtrim(std::string& s) {
     s.erase(std::find_if(s.rbegin(), s.rend(), [](unsigned char ch) {
         return !std::isspace(ch);
     }).base(), s.end());
 }
+
 void pUtil::trim(std::string& s) {
     ltrim(s);
     rtrim(s);
 }
+
 std::string pUtil::get_string_from_char(const char* path)
 {
     int arrsize = strlen(path);

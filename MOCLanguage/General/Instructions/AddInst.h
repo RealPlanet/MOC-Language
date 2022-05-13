@@ -5,8 +5,8 @@
 #include "../BaseClasses/Instruction/Instruction.h"
 #include "../Processors/Runtime/Runtime.h"
 #include "../Processors/Compiler/Compiler.h"
-#include "../Tokens/TokenList/Token.h"
-#include "../Tokens/TokenType/Register.h"
+#include "../Tokens/TokenList.h"
+#include "../Tokens/TokenDefinition/Register.h"
 #include "../Processors/Sets/RegisterManager.h"
 
 /*

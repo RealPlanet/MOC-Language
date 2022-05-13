@@ -4,7 +4,7 @@
 #include "../BaseClasses/Instruction/Instruction.h"
 
 /*
-* Print's a numeric constant to the console
+* Print a string constant to the console
 * Syntax: HLT
 */
 class PrintString : public Instruction {
@@ -15,14 +15,14 @@ public:
 
 		const TokenList* tokens = compiler.getTokenList();
 		int i = compiler.getTokenIndex();
-		/*
+		
 		if (tokens->get(i + 1).type == TokenType::STRING) {
 			bb->write_byte8((uint8_t)InstType::S);
 		}
 		else {
 			std::cout << tokens->get(i).line << " : Bad PRINTI instruction, wrong parameter given" << std::endl;
 			return 1;
-		}*/
+		}
 
 		return 0;
 	}

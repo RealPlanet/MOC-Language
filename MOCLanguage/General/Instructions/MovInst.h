@@ -2,7 +2,7 @@
 #define MOC_MOVNST_H
 //Includes OK
 #include "../BaseClasses/Instruction/Instruction.h"
-#include "../Tokens/TokenList/Token.h"
+#include "../Tokens/TokenList.h"
 #include "../Processors/Runtime/Runtime.h"
 #include "../Processors/Compiler/Compiler.h"
 #include <iostream>

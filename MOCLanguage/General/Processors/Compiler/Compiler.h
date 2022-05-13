@@ -2,8 +2,8 @@
 #define MOC_COMPILER_H
 //Includes OK
 #include "BB/Bytebuffer.h"
-#include "../../Tokens/TokenList/Token.h"
 #include "../Sets/LabelTable.h"
+#include "../../Tokens/TokenList.h"
 
 enum class _CompilerStatus {
 	SUCCESS,

@@ -1,10 +1,10 @@
 #include "Instructionset.h"
 #include <stdexcept>
 
-void Instructionset::register_instruction(const std::string name, InstructionPtr instruction) {
+void InstructionSet::register_instruction(const std::string name, InstructionPtr instruction) {
 	instruction_codes_name[name] = instruction;
 }
-InstructionPtr Instructionset::get_instruction(const std::string name) const {
+InstructionPtr InstructionSet::get_instruction(const std::string name) const {
 	try {
 		return instruction_codes_name.at(name);
 	}
@@ -13,7 +13,7 @@ InstructionPtr Instructionset::get_instruction(const std::string name) const {
 		return instruction_codes_name.at("nop");
 	}
 }
-InstructionPtr Instructionset::get_instruction_from_opcode(int opcode) const
+InstructionPtr InstructionSet::get_instruction_from_opcode(int opcode) const
 {
 	try {
 		return instruction_codes_opcode.at(opcode);
@@ -41,7 +41,7 @@ InstructionPtr Instructionset::get_instruction_from_opcode(int opcode) const
 #include "../../Instructions/PrintStringInst.h"
 #include "../../Instructions/CmpInst.h"
 
-Instructionset::Instructionset() {
+InstructionSet::InstructionSet() {
 	int inst_counter = 0x00;
 	register_instruction("nop",		std::make_shared<Instruction>	(inst_counter++)	);
 
